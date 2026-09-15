@@ -54,3 +54,8 @@ src/frontend/src/
 - `pnpm build` — typecheck + production build
 - `pnpm lint` — ESLint
 - `pnpm test` — Vitest
+
+## Workflow
+
+- Run pnpm lint and fix any TypeScript errors before considering any task complete, and prefer
+  editing existing components over creating new ones.
