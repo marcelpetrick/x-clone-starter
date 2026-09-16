@@ -118,6 +118,11 @@ and navigates. Reuse `useAuthSubmit` rather than re-implementing that sequence.
 - Tests run on Vitest globals + jsdom (`vite.config.ts`'s `test` block, `src/test/setup.ts`), so
   `describe`/`it`/`expect` are available without imports, as are jest-dom matchers.
 
+## Issue tracking
+
+Tracked work items live in `docs/issues/<slug>.md` as Markdown with a `status` field that goes
+from `open` to `done`. They're filed with `/create-issue` and resolved with `/close-issue`.
+
 ## Workflow
 
 - Before considering a task complete, run `pnpm lint` **and** `pnpm build` (lint alone won't

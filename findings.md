@@ -53,3 +53,22 @@ It is a frontend for an X (Twitter)-style app, but the real topic of the seminar
     - The Chrome DevTools and Context7 MCP servers start through `npx`, so you need internet access and Chrome installed.
 
 Point 1 is the only real risk. Everything else is taught during the session.
+
+## Before sharing this with the team
+
+Added on 2026-09-16, during the seminar.
+
+**License: none, so not automatically free to share**
+
+- There's no LICENSE file and no license field in `package.json`. Without a license, the code and `workshop.html` legally stay with their authors (Zartis, zartis-digital/x-clone-starter). Having access doesn't give you the right to reuse or redistribute them.
+- `origin` points at a personal copy, github.com/marcelpetrick/x-clone-starter. If that copy is public, it already redistributes Zartis's material; consider making it private until you've asked.
+- To be sure, ask the Zartis organisers whether the material may be reused internally, and check the event invitation or terms. This is not legal advice.
+
+**Backend: everyone uses the same API, and that causes complications**
+
+- `src/frontend/.env` points everyone at one shared API, `https://workshops.zartis.com/x-clone-api`. The backend isn't in the repo, so teammates can't run their own.
+- In practice, as seen during the seminar:
+  - Everyone on `cluster-test` shares likes, retweets and posts. The guide asks for separate accounts for this reason.
+  - Posts can't be deleted, and the API doesn't check image keys. Broken test posts stay up for everyone.
+  - Uploaded images go into Zartis's shared storage.
+- Availability is unknown. It's Zartis's server, deployed for this workshop, and nothing says how long it stays online. Teammates using it after the event may find it gone, and would be using a company's infrastructure without permission.
